@@ -6,10 +6,10 @@ from wonderwords import RandomWord
 
 
 class App(ctk.CTk):
-    def __init__(self):
+    def _init_(self):
         super().__init__()
 
-        self.title("Speed Typing Test")  # Set window title
+        self.title("Typing Speed Test")  # Set window title
         self.word_generator = RandomWord()  # Initialize the word generator
 
         self.entry_word = None
@@ -46,10 +46,10 @@ class App(ctk.CTk):
         # Set application description / usage instructions
         self.lbl_instruction = ctk.CTkLabel(
             master=self,
-            text="Welcome to the typing speed test application!\n"
-            "This is my first golden project for the CodeClause internship.\n"
+            text="Welcome to the typing speed test app!\n"
+            "This is the project for my Scaler: Python for Beginners course.\n"
             "The test lasts for a total of 60 seconds.\n"
-            'Type the words as shown on the screen and press the spacebar to proceed to the next word.\n'
+            'Type the words as shown on the screen and press the "Spacebar" to proceed to the next word.\n'
             "The metrics will be shown in real-time as well as at the end of the test.\n"
             "You can exit the test at any time.",
             font=ctk.CTkFont(family="Helvetica", size=14, slant="italic"),
@@ -79,7 +79,7 @@ class App(ctk.CTk):
         self.btn_start.pack(pady=20)
 
         # Set fixed window size
-        self.geometry("600x400")
+        self.geometry("650x400")
 
         # Set the callback for the window exit event
         self.protocol("WM_DELETE_WINDOW", self.on_exit)
