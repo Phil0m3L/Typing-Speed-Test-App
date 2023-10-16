@@ -6,7 +6,7 @@ from wonderwords import RandomWord
 
 
 class App(ctk.CTk):
-    def _init_(self):
+    def __init__(self):
         super().__init__()
 
         self.title("Typing Speed Test")  # Set window title
